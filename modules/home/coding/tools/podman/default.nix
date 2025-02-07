@@ -15,7 +15,7 @@ in {
 
   config = mkIf cfg.enable {
     #services.podman.enable = true;
-    home.packages = with pkgs; [podman podman-compose dbeaver-bin];
+    home.packages = with pkgs; [podman podman-compose];
     home.file = {
       ".config/containers/registries.conf".source = ./registries.conf;
       ".config/containers/policy.json".source = ./policy.json;
