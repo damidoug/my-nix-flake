@@ -64,7 +64,7 @@ in {
       # Enable 'micro' (terminal-based text editor)
       micro.enable = true;
 
-      rio.enable = true;
+      kitty.enable = true;
 
       # Enable 'starship' (shell prompt)
       starship = {
