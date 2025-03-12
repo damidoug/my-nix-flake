@@ -18,7 +18,6 @@ in {
     programs = {
       # Enable aria2 (downloading utility)
       aria2.enable = true;
-
       # Enable 'bat' (for better file viewing)
       bat = {
         enable = true;

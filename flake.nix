@@ -4,7 +4,6 @@
   inputs = {
     # NixPkgs Unstable
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    bitwarden.url = "github:TomaSajt/nixpkgs/bitwarden";
 
     # macOS Support
     darwin = {

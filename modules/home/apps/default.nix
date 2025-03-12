@@ -34,6 +34,8 @@ in {
         "nngceckbapebfimnlniiiahkandclblb"
         # Vencord
         "cbghhgpcnddeihccjmnadmkaejncjndb"
+        # daily.dev
+        "jlmpjdjjbgclbocgajdjefcidcncaied"
       ];
     };
     home.sessionVariables.BROWSER = "brave";
