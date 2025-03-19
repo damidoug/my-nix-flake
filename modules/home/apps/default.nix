@@ -19,6 +19,7 @@ in {
       vesktop
       spotube
       (mkIf pkgs.stdenv.isDarwin utm)
+      qbittorrent
     ];
     programs.brave = {
       enable = true;
