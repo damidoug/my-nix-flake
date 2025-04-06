@@ -15,6 +15,7 @@ in {
 
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
+      affine-bin
       bitwarden-desktop
       vesktop
       spotube

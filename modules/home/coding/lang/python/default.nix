@@ -14,15 +14,10 @@ in {
   };
 
   config = mkIf cfg.enable {
-    home.packages = [
-      (pkgs.python312.withPackages (
-        python-pkgs:
-          with python-pkgs; [
-            uv
-            ruff
-            httpie
-          ]
-      ))
+    home.packages = with pkgs; [
+      python313
+      uv
+      ruff
     ];
     programs.zed-editor = {
       extensions = ["ruff"];

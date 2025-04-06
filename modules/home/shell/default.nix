@@ -85,6 +85,7 @@ in {
         gping # Graphical ping utility for visualizing ping results
         rsync # Reliable file copy tool with synchronization support
         nerd-fonts.fira-code # Fira Code font with programming ligatures
+        ffmpeg-full # Complete, cross-platform solution to record, convert and stream audio and video
       ];
       # Define shortcuts for commonly used commands
       shellAliases = {
