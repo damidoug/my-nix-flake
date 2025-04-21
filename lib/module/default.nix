@@ -9,11 +9,11 @@ with lib; rec {
 
   mkBoolOpt' = mkOpt' types.bool;
 
-  enabled = {
-    enable = true;
-  };
+  mkStrOpt = mkOpt types.str;
 
-  disabled = {
-    enable = false;
-  };
+  mkStrOpt' = mkOpt' types.str;
+
+  enabled.enable = true;
+
+  disabled.enable = false;
 }

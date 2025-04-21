@@ -43,6 +43,7 @@
       inherit inputs;
       src = ./.;
 
+      # Allow unfree packages
       channels-config.allowUnfree = true;
 
       # Add modules to all NixOS systems.

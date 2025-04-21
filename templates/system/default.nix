@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  namespace,
   ...
 }: {
   imports = [./hardware-configuration.nix];
