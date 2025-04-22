@@ -71,7 +71,7 @@ with lib; {
       ShowRemovableMediaOnDesktop = false;
       ShowPathbar = true;
       ShowStatusBar = true;
-      _FXShowPosixPathInTitle = true;
+      _FXShowPosixPathInTitle = false;
     };
     loginwindow = {
       GuestEnabled = false;
@@ -86,9 +86,9 @@ with lib; {
       ShowSeconds = true;
     };
     screencapture = {
-      disable-shadow = true;
+      disable-shadow = false;
       target = "file";
-      location = "$HOME/Pictures/screenshots/";
+      #location = "$HOME/Pictures/screenshots/";
       type = "png";
     };
   };

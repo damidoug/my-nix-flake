@@ -15,6 +15,7 @@ in {
   config = mkIf cfg.enable {
     ${namespace}.apps = {
       affine = enabled;
+      bitwarden = enabled;
       brave = enabled;
       spotube = enabled;
       vesktop = enabled;

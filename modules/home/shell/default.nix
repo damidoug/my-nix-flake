@@ -15,8 +15,9 @@ in {
 
   config = mkIf cfg.enable {
     ${namespace}.shell = {
-      bash.enable = true; # linux and macos has bash installed by default
+      bash = enabled; # linux and darwin has bash installed by default
       zsh.enable = pkgs.stdenv.isDarwin; # true on darwin systems
+      rio = enabled;
     };
   };
 }

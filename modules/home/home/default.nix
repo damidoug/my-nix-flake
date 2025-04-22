@@ -1,11 +1,4 @@
-{
-  options,
-  config,
-  lib,
-  pkgs,
-  namespace,
-  ...
-}: {
+{pkgs, ...}: {
   config = {
     programs.home-manager.enable = true;
 
