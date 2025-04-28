@@ -15,6 +15,7 @@ in {
   config = mkIf cfg.enable {
     ${namespace}.developer = {
       bun = enabled;
+      ffmpeg = enabled;
       git = enabled;
       go = enabled;
       nix = enabled;

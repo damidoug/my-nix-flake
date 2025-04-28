@@ -17,6 +17,7 @@ in {
       affine = enabled;
       bitwarden = enabled;
       brave = enabled;
+      mpv = enabled;
       spotube = enabled;
       vesktop = enabled;
     };
