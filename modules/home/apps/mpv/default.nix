@@ -15,11 +15,12 @@ in {
 
   config = mkIf cfg.enable {
     programs.mpv = {
-      enable = true;
+      enable = !pkgs.stdenv.isDarwin;
       scripts = with pkgs.mpvScripts; [
         webtorrent-mpv-hook
         thumbfast
       ];
     };
+    home.packages = mkIf pkgs.stdenv.isDarwin [pkgs.iina];
   };
 }
