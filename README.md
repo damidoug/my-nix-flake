@@ -21,4 +21,4 @@ Here's a quick look at what this flake offers:
     * Modules
     * Overlays
     * System configurations
-* **📚 Leveraging `snowfallorg/lib`**: Utilizes the powerful [`snowfallorg/lib`](https://github.com/snowfallorg/lib) to enhance module and package management.
+* **📚 Leveraging `Denix`**: Utilizes the powerful [`yunfachi/denix`](https://github.com/yunfachi/denix) to enhance module and package management.

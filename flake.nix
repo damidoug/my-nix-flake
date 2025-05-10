@@ -1,77 +1,38 @@
 {
-  description = "";
+  description = "Modular configuration of Home Manager and NixOS with Denix";
 
   inputs = {
-    # NixPkgs Unstable
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-
-    # macOS Support
-    darwin = {
-      url = "github:LnL7/nix-darwin";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # Home Manager
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # Snowfall Lib
-    snowfall-lib = {
-      url = "github:snowfallorg/lib";
+    denix = {
+      url = "github:yunfachi/denix/feat/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
     };
   };
 
-  outputs = inputs: let
-    lib = inputs.snowfall-lib.mkLib {
-      inherit inputs;
-      src = ./.;
+  outputs = {
+    denix,
+    nixpkgs,
+    ...
+  } @ inputs: let
+    mkConfigurations = moduleSystem:
+      denix.lib.configurations {
+        inherit moduleSystem;
+        homeManagerUser = "dami"; #!!! REPLACEME
 
-      snowfall = {
-        meta = {
-          name = "dotfiles";
-          title = "dotfiles";
+        paths = [./hosts ./modules ./rices];
+
+        specialArgs = {
+          inherit inputs;
         };
-
-        namespace = "custom";
       };
-    };
-  in
-    lib.mkFlake {
-      inherit inputs;
-      src = ./.;
-
-      # Allow unfree packages
-      channels-config.allowUnfree = true;
-
-      # Add modules to all NixOS systems.
-      systems.modules.nixos = with inputs; [
-        home-manager.nixosModules.home-manager
-        {
-          home-manager = {
-            useUserPackages = true;
-            useGlobalPkgs = true;
-            verbose = true;
-            backupFileExtension = "backup";
-          };
-        }
-      ];
-
-      # Add modules to all Darwin systems.
-      systems.modules.darwin = with inputs; [
-        home-manager.darwinModules.home-manager
-        {
-          home-manager = {
-            useUserPackages = true;
-            useGlobalPkgs = true;
-            verbose = true;
-            backupFileExtension = "backup";
-          };
-        }
-      ];
-
-      templates = import ./templates {};
-    };
+  in {
+    nixosConfigurations = mkConfigurations "nixos";
+    homeConfigurations = mkConfigurations "home";
+    darwinConfigurations = mkConfigurations "darwin";
+  };
 }
