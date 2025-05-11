@@ -21,6 +21,7 @@ delib.rice {
       rust.enable = true;
       usebruno.enable = true;
       zed.enable = true;
+      zig.enable = true;
     };
     cli.ffmpgeg.enable = true;
   };
