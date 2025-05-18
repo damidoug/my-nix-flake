@@ -4,7 +4,7 @@ delib.host {
   rice = "workstation";
   type = "desktop";
 
-  home.home.stateVersion = "24.11";
+  home.home.stateVersion = "25.11";
   homeManagerSystem = "aarch64-darwin";
 
   darwin = {myconfig, ...}: {
