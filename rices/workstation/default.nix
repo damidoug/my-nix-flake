@@ -24,5 +24,6 @@ delib.rice {
       zig.enable = true;
     };
     cli.ffmpgeg.enable = true;
+    shell.starship.enable = true;
   };
 }

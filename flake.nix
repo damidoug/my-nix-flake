@@ -8,7 +8,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     denix = {
-      url = "github:yunfachi/denix/feat/nix-darwin";
+      url = "github:yunfachi/denix";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };

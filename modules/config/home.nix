@@ -33,6 +33,8 @@ in
       xdg.enable = true;
 
       targets.genericLinux.enable = !(isDarwin || isNixos);
+
+      fonts.fontconfig.enable = true;
     };
 
     nixos.always.home-manager = homeSettings;
