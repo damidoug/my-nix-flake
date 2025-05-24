@@ -29,8 +29,10 @@ delib.rice {
     };
     cli.ffmpgeg.enable = true;
     shell = {
-      zsh.enable = pkgs.stdenv.isDarwin;
       starship.enable = true;
+      bash.enable = true;
+      rio.enable = true;
+      zsh.enable = pkgs.stdenv.isDarwin;
     };
   };
 }

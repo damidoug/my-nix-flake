@@ -8,6 +8,7 @@ delib.module {
   name = "nix";
 
   home.always.nix = with lib; {
+    package = mkForce pkgs.lix;
     gc = {
       automatic = true;
       options = "--delete-older-than 7d";
@@ -30,6 +31,7 @@ delib.module {
 
   # FIX ME (config not change)
   darwin.always.nix = with lib; {
+    package = mkForce pkgs.lix;
     gc = {
       automatic = true;
       options = "--delete-older-than 7d";

@@ -7,6 +7,8 @@ delib.host {
   home.home.stateVersion = "25.05";
   homeManagerSystem = "aarch64-darwin";
 
+  nixos.nixpkgs.hostPlatform = "aarch64-darwin";
+
   darwin = {myconfig, ...}: {
     nixpkgs.hostPlatform = "aarch64-darwin";
     system.stateVersion = 6;

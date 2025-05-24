@@ -11,11 +11,7 @@ delib.module {
   home.ifEnabled = {
     programs.starship = {
       enable = true;
-      settings = {
-        "$schema" = "https://starship.rs/config-schema.json";
-        # Inserts a blank line between shell prompts
-        add_newline = true;
-      };
+      settings = builtins.fromTOML (builtins.readFile ./config.toml);
     };
     home.packages = [
       pkgs.nerd-fonts.fira-code
