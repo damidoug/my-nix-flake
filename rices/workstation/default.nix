@@ -1,4 +1,8 @@
-{delib, ...}:
+{
+  delib,
+  pkgs,
+  ...
+}:
 delib.rice {
   name = "workstation";
 
@@ -24,6 +28,9 @@ delib.rice {
       zig.enable = true;
     };
     cli.ffmpgeg.enable = true;
-    shell.starship.enable = true;
+    shell = {
+      zsh.enable = pkgs.stdenv.isDarwin;
+      starship.enable = true;
+    };
   };
 }
