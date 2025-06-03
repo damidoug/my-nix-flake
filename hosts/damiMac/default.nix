@@ -7,15 +7,13 @@ delib.host {
   home.home.stateVersion = "25.05";
   homeManagerSystem = "aarch64-darwin";
 
-  nixos.nixpkgs.hostPlatform = "aarch64-darwin";
+  myconfig.system.user = {
+    username = "dami";
+    fullname = "Douglas Damiano";
+  };
 
-  darwin = {myconfig, ...}: {
+  darwin = {
     nixpkgs.hostPlatform = "aarch64-darwin";
     system.stateVersion = 6;
-
-    users.users.${myconfig.constants.username} = {
-      name = myconfig.constants.username;
-      description = myconfig.constants.userfullname;
-    };
   };
 }

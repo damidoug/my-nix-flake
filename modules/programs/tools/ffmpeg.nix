@@ -4,11 +4,9 @@
   ...
 }:
 delib.module {
-  name = "apps.vesktop";
+  name = "tools.ffmpgeg";
 
   options = delib.singleEnableOption false;
 
-  home.ifEnabled = {
-    home.packages = [pkgs.vesktop];
-  };
+  home.ifEnabled.home.packages = [pkgs.ffmpeg-full];
 }

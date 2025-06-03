@@ -13,8 +13,6 @@ delib.module {
       enable = true;
       settings = builtins.fromTOML (builtins.readFile ./config.toml);
     };
-    home.packages = [
-      pkgs.nerd-fonts.fira-code
-    ];
+    home.packages = [pkgs.nerd-fonts.fira-code];
   };
 }

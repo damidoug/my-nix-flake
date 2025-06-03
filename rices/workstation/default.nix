@@ -1,8 +1,4 @@
-{
-  delib,
-  pkgs,
-  ...
-}:
+{delib, ...}:
 delib.rice {
   name = "workstation";
 
@@ -27,12 +23,10 @@ delib.rice {
       zed.enable = true;
       zig.enable = true;
     };
-    cli.ffmpgeg.enable = true;
+    tools.ffmpgeg.enable = true;
     shell = {
       starship.enable = true;
-      bash.enable = true;
       rio.enable = true;
-      zsh.enable = pkgs.stdenv.isDarwin;
     };
   };
 }
