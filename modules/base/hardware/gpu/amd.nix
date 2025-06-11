@@ -21,8 +21,8 @@ delib.module {
           amdvlk = {
             enable = true;
             support32Bit.enable = true;
+            supportExperimental.enable = true;
           };
-          supportExperimental.enable = true;
           legacySupport.enable = cfg.legacySupport;
         };
         graphics.extraPackages = with pkgs; [

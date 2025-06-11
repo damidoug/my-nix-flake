@@ -8,7 +8,7 @@ delib.rice {
       bitwarden.enable = true;
       brave.enable = true;
       mpv.enable = true;
-      spotube.enable = true;
+      spotube.enable = false;
       vesktop.enable = true;
     };
     code = {
