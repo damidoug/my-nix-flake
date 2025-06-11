@@ -8,8 +8,8 @@ delib.module {
 
   options.system.locale = with delib; {
     timeZone = strOption "America/New_York";
-    locale = strOption "en_US.UTF-8";
-    supportedLocales = listOption strOption ["en_US.UTF-8"];
+    language = strOption "en_US.UTF-8";
+    supportedLanguages = listOption strOption ["en_US.UTF-8"];
     keyMap = strOption "us";
   };
 
@@ -23,7 +23,7 @@ delib.module {
       useXkbConfig = config.services.xserver.enable;
     };
 
-    services.xserver.xkb.layout = cfg.keymap;
+    services.xserver.xkb.layout = cfg.keyMap;
 
     time = {
       timeZone = cfg.timeZone;
@@ -31,9 +31,9 @@ delib.module {
     };
 
     i18n = {
-      defaultLocale = cfg.locale;
-      supportedLocales = cfg.supportedLocales;
-      extraLocaleSettings.LC_ALL = cfg.locale;
+      defaultLocale = cfg.language;
+      supportedLocales = cfg.supportedLanguages;
+      extraLocaleSettings.LC_ALL = cfg.language;
     };
   };
 }

@@ -23,7 +23,7 @@ delib.module {
           };
         };
       };
-      thermald.enable = myconfig.hardware.cpu.intel;
+      #thermald.enable = myconfig.hardware.cpu.intel;
       logind = {
         lidSwitch = "poweroff";
         lidSwitchExternalPower = "lock";
