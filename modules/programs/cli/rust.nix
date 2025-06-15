@@ -9,7 +9,13 @@ delib.module {
   options = delib.singleEnableOption false;
 
   home.ifEnabled = {
-    home.packages = with pkgs; [rustup cargo-tauri];
+    home.packages = with pkgs; [
+      cargo
+      clippy
+      rust-analyzer
+      rustc
+      rustfmt
+    ];
     programs.zed-editor.extensions = ["toml"];
   };
 }

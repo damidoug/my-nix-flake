@@ -17,8 +17,9 @@ delib.module {
         details = "In a workspace";
         git_integration = true;
         idle = {
-          timeout = 300; # 5 minutes
-          action = "clear_activity";
+          timeout = 600; # 10 minutes
+          action = "change_activity";
+          state = "Relaxing...";
         };
       };
     };

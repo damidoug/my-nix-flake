@@ -1,6 +1,6 @@
 {delib, ...}:
 delib.module {
-  name = "cli.zed";
+  name = "gui.zed";
 
   options = delib.singleEnableOption false;
 
@@ -12,6 +12,7 @@ delib.module {
       "graphql"
       "make"
       "git-firefly"
+      "nix"
       "env"
       "log"
       "php"
@@ -27,6 +28,14 @@ delib.module {
         mode = "system";
         light = "One Light";
         dark = "One Dark Pro";
+      };
+      languages.Nix = {
+        language_servers = ["nil" "!nixd"];
+        format_on_save = "on";
+        formatter.external = {
+          command = "alejandra";
+          arguments = ["--quiet" "--"];
+        };
       };
     };
   };

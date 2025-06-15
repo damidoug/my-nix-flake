@@ -9,10 +9,12 @@ delib.module {
   options = delib.singleEnableOption false;
 
   home.ifEnabled = {
-    home.packages = with pkgs; [
-      python313
-      uv
-      ruff
+    home.packages = [
+      (pkgs.python313.withPackages (python-pkgs:
+        with python-pkgs; [
+          uv
+          ruff
+        ]))
     ];
     programs.zed-editor = {
       extensions = ["ruff"];

@@ -8,5 +8,8 @@ delib.module {
 
   options = delib.singleEnableOption false;
 
-  home.ifEnabled.home.packages = [pkgs.zig];
+  home.ifEnabled.home.packages = with pkgs; [
+    zig
+    zls
+  ];
 }
