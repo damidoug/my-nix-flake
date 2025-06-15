@@ -7,26 +7,22 @@ delib.rice {
       affine.enable = true;
       bitwarden.enable = true;
       brave.enable = true;
+      ghostty.enable = true;
       mpv.enable = true;
-      spotube.enable = false;
+      usebruno.enable = false;
       vesktop.enable = true;
-      usebruno.enable = true;
       zed.enable = true;
     };
     cli = {
+      starship.enable = true;
       bun.enable = true;
-      git.enable = true;
+      ffmpeg.enable = true;
       golang.enable = true;
-      nix.enable = true;
-      podman.enable = true;
+      jujutsu.enable = true;
       python.enable = true;
       rust.enable = true;
+      usebruno.enable = true;
       zig.enable = true;
-    };
-    tools.ffmpgeg.enable = true;
-    shell = {
-      starship.enable = true;
-      rio.enable = true;
     };
   };
 }
