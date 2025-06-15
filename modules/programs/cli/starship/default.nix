@@ -4,7 +4,7 @@
   ...
 }:
 delib.module {
-  name = "shell.starship";
+  name = "cli.starship";
 
   options = delib.singleEnableOption false;
 

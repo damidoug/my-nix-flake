@@ -52,7 +52,7 @@
   '';
 in
   delib.module {
-    name = "code.podman";
+    name = "cli.podman";
 
     options = delib.singleEnableOption false;
 

@@ -4,7 +4,7 @@
   ...
 }:
 delib.module {
-  name = "code.rust";
+  name = "cli.rust";
 
   options = delib.singleEnableOption false;
 

@@ -3,15 +3,17 @@ delib.rice {
   name = "workstation";
 
   myconfig = {
-    apps = {
+    gui = {
       affine.enable = true;
       bitwarden.enable = true;
       brave.enable = true;
       mpv.enable = true;
       spotube.enable = false;
       vesktop.enable = true;
+      usebruno.enable = true;
+      zed.enable = true;
     };
-    code = {
+    cli = {
       bun.enable = true;
       git.enable = true;
       golang.enable = true;
@@ -19,8 +21,6 @@ delib.rice {
       podman.enable = true;
       python.enable = true;
       rust.enable = true;
-      usebruno.enable = true;
-      zed.enable = true;
       zig.enable = true;
     };
     tools.ffmpgeg.enable = true;

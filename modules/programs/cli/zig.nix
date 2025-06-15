@@ -4,9 +4,9 @@
   ...
 }:
 delib.module {
-  name = "apps.spotube";
+  name = "cli.zig";
 
   options = delib.singleEnableOption false;
 
-  home.ifEnabled.home.packages = with pkgs; [spotube yt-dlp];
+  home.ifEnabled.home.packages = [pkgs.zig];
 }

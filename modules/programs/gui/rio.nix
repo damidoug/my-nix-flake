@@ -1,6 +1,6 @@
 {delib, ...}:
 delib.module {
-  name = "shell.rio";
+  name = "gui.rio";
 
   options = delib.singleEnableOption false;
 

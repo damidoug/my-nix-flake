@@ -4,7 +4,7 @@
   ...
 }:
 delib.module {
-  name = "apps.vesktop";
+  name = "gui.vesktop";
 
   options = delib.singleEnableOption false;
 

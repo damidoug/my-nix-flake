@@ -1,6 +1,6 @@
 {delib, ...}:
 delib.module {
-  name = "code.zed";
+  name = "cli.zed";
 
   options = delib.singleEnableOption false;
 

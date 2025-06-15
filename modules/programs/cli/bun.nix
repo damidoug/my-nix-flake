@@ -4,7 +4,7 @@
   ...
 }:
 delib.module {
-  name = "code.bun";
+  name = "cli.bun";
 
   options = delib.singleEnableOption false;
 

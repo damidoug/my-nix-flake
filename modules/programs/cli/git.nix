@@ -1,6 +1,6 @@
 {delib, ...}:
 delib.module {
-  name = "code.git";
+  name = "cli.git";
 
   options = delib.singleEnableOption false;
 

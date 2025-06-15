@@ -1,6 +1,6 @@
 {delib, ...}:
 delib.module {
-  name = "apps.brave";
+  name = "gui.brave";
 
   options = delib.singleEnableOption false;
 

@@ -5,7 +5,7 @@
   ...
 }:
 delib.module {
-  name = "apps.mpv";
+  name = "gui.mpv";
 
   options = delib.singleEnableOption false;
 

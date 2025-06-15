@@ -4,7 +4,7 @@
   ...
 }:
 delib.module {
-  name = "code.golang";
+  name = "cli.golang";
 
   options = delib.singleEnableOption false;
 

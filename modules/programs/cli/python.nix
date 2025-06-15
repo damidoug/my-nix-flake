@@ -4,7 +4,7 @@
   ...
 }:
 delib.module {
-  name = "code.python";
+  name = "cli.python";
 
   options = delib.singleEnableOption false;
 

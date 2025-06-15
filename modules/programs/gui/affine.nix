@@ -4,9 +4,9 @@
   ...
 }:
 delib.module {
-  name = "code.zig";
+  name = "gui.affine";
 
   options = delib.singleEnableOption false;
 
-  home.ifEnabled.home.packages = [pkgs.zig];
+  home.ifEnabled.home.packages = [pkgs.affine];
 }

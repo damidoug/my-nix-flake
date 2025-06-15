@@ -4,7 +4,7 @@
   ...
 }:
 delib.module {
-  name = "code.nix";
+  name = "cli.nix";
 
   options = delib.singleEnableOption false;
 

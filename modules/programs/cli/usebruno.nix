@@ -4,9 +4,9 @@
   ...
 }:
 delib.module {
-  name = "tools.ffmpgeg";
+  name = "cli.usebruno";
 
   options = delib.singleEnableOption false;
 
-  home.ifEnabled.home.packages = [pkgs.ffmpeg-full];
+  home.ifEnabled.home.packages = with pkgs; [bruno bruno-cli];
 }

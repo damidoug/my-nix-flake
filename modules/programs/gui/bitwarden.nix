@@ -4,7 +4,7 @@
   ...
 }:
 delib.module {
-  name = "apps.bitwarden";
+  name = "gui.bitwarden";
 
   options = delib.singleEnableOption false;
 
