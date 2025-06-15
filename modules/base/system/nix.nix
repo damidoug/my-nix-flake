@@ -26,13 +26,32 @@
       use-xdg-base-directories = true;
     };
   };
+
+  packages = with pkgs; [
+    alejandra
+    nixfmt-rfc-style
+    nix-prefetch-scripts
+    nixfmt-tree
+    nil
+  ];
 in
   delib.module {
     name = "system.nix";
 
-    darwin.always.nix = nixConfig // {optimise.automatic = true;};
+    darwin.always = {
+      documentation.enable = false;
+      nix = nixConfig // {optimise.automatic = true;};
+      environment.systemPackages = packages;
+    };
 
-    nixos.always.nix = nixConfig // {optimise.automatic = true;};
+    nixos.always = {
+      documentation.nixos.enable = false;
+      nix = nixConfig // {optimise.automatic = true;};
+      environment.systemPackages = packages;
+    };
 
-    home.always.nix = nixConfig;
+    home.always = {
+      nix = nixConfig;
+      home.packages = packages;
+    };
   }
