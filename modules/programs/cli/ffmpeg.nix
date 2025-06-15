@@ -4,7 +4,7 @@
   ...
 }:
 delib.module {
-  name = "cli.ffmpgeg";
+  name = "cli.ffmpeg";
 
   options = delib.singleEnableOption false;
 
