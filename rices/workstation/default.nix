@@ -9,7 +9,7 @@ delib.rice {
       brave.enable = true;
       ghostty.enable = true;
       mpv.enable = true;
-      usebruno.enable = false;
+      usebruno.enable = true;
       vesktop.enable = true;
       zed.enable = true;
     };
