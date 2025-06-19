@@ -3,6 +3,7 @@
   pkgs,
   ...
 }: let
+  # Corrected container policy
   containerPolicy = ''
     {
       "default": [
@@ -17,12 +18,12 @@
         "docker": {
           "docker.io": [
             {
-              "type": "accept"
+              "type": "insecureAcceptAnything"
             }
           ],
           "quay.io": [
             {
-              "type": "accept"
+              "type": "insecureAcceptAnything"
             }
           ],
           "my-registry.local:5000": [
@@ -34,6 +35,7 @@
       }
     }
   '';
+
   registryConfig = ''
     unqualified-search-registries = ["docker.io", "quay.io"]
 
