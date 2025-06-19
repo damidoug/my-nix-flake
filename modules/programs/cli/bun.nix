@@ -19,6 +19,6 @@ delib.module {
       };
       zed-editor.extensions = ["biome" "vue"];
     };
-    home.packages = with pkgs; [nodejs biome];
+    home.packages = with pkgs; [nodejs_24 biome];
   };
 }

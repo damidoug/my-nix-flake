@@ -19,6 +19,7 @@ delib.rice {
       ffmpeg.enable = true;
       golang.enable = true;
       jujutsu.enable = true;
+      podman.enable = true;
       python.enable = true;
       rust.enable = true;
       usebruno.enable = true;
